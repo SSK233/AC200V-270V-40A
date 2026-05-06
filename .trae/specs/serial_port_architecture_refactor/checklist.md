@@ -1,0 +1,21 @@
+# 串口架构重构 - Verification Checklist
+
+- [x] SerialPortManager 已增加原始字节读写接口
+- [x] SerialPortManager 新增 bytesReceived 信号
+- [x] ModbusManager 不再直接打开串口
+- [x] ModbusManager 通过 SerialPortManager 发送和接收数据
+- [x] Modbus RTU 协议帧组装和解析正确实现
+- [x] 发电机测试通信通过 SerialPortManager 进行
+- [x] HomePage.qml 只打开一次串口
+- [x] GeneratorTestPage.qml 使用正确的通信方式
+- [x] 发电机测试通信由独立的 GeneratorTestManager 管理
+- [ ] 无"拒绝访问"或权限错误
+- [ ] Modbus 风机控制功能正常
+- [ ] Modbus 电流设置功能正常
+- [ ] Modbus 状态读取功能正常
+- [ ] 发电机测试波动实验功能正常
+- [ ] 发电机测试突加实验功能正常
+- [ ] 发电机测试突卸实验功能正常
+- [ ] 发电机测试谐波实验功能正常
+- [ ] 串口开关操作流畅无异常
+- [x] 代码编译无错误和警告
